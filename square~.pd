@@ -1,0 +1,12 @@
+#N canvas 0 44 1366 708 10;
+#X text 184 200 generate square;
+#X obj 371 431 phasor~ \$1;
+#X obj 350 371 inlet;
+#X obj 424 376 inlet;
+#X obj 400 595 outlet~;
+#X obj 394 506 expr~ max($v1>0.5 \, $f2==0);
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 2 0 5 1;
+#X connect 3 0 1 1;
+#X connect 5 0 4 0;
